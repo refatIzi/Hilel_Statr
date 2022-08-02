@@ -9,8 +9,6 @@ public class test {
             array[i] = new Random().nextInt(100);
         for (int i = 0; i < array.length; i++)
             System.out.println(i + 1 + " element " + array[i]);
-        int b=5;
-        int c=++b+ b++ + b++;
-        System.out.println(c);
+
     }
 }
