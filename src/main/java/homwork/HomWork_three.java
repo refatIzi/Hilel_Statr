@@ -1,11 +1,9 @@
 package homwork;
 
-import hillel.MyScanner_;
-
 import java.io.IOException;
 import java.util.Scanner;
 
-public class HomWork3 {
+public class HomWork_three {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         //MyScanner_ scanner = new MyScanner_(System.in);
