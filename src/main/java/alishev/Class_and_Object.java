@@ -9,7 +9,7 @@ public class Class_and_Object {
         Info infoB = new Info();
         infoB.firstName = "Лиля";
         infoB.lastName = "Заболотна";
-        infoB.age = 30;
+        infoB.age = 25;
         System.out.println("My Name " + infoA.firstName + " " + infoA.lastName + " age " + infoA.age);
         System.out.println("My Name " + infoB.firstName + " " + infoB.lastName + " age " + infoB.age);
 
