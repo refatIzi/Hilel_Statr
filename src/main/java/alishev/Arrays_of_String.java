@@ -15,7 +15,7 @@ public class Arrays_of_String {
             System.out.println(i + 1 + " " + sandwich[i]);
         }
 
-        System.out.println("Виьерите из меню состав сендвича нажав номер состава");
+        System.out.println("Виберите из меню состав сендвича нажав номер состава");
 
         MyScanner_ myScanner_ = new MyScanner_(System.in);
 
