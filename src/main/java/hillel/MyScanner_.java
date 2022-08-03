@@ -12,7 +12,7 @@ public class MyScanner_ {
         this.in = in;
     }
 
-     /**ConcurrentLinkedQueue посоветовал мой товариш  вместо ArrayList так как изначально я его использовал
+     /** класс ConcurrentLinkedQueue посоветовал мой товариш  вместо ArrayList так как изначально я его использовал
      * удобвство в том что с помошью метода offer() ми добовляем данние в list а уже с помощью метода poll()
      * ми забираем данние из list и при єто он удаляет то что забрали начиная с голови*/
     ConcurrentLinkedQueue<String> list = new ConcurrentLinkedQueue<>();
