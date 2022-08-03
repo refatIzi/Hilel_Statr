@@ -36,7 +36,7 @@ public class MyScanner_ {
         byte[] buff = new byte[1024];
         int read = in.read(buff);
         // System.out.println("Size buffer "+read);
-        /**Добавляем в buff данние уменшая ращмер на -1 та как последний єлемен Команда для опускания каретки печатающего устройства на одну строку вниз
+        /**Добавляем в buff данние уменшая ращмер на -1 та как последний єлемен Команда для опускания каретки на одну строку вниз
          * она нам не нужна*/
         return new String(Arrays.copyOf(buff, read - 1));
     }
