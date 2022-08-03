@@ -25,13 +25,15 @@ public class MyScanner_ {
     }
 
     public double nextFloat() throws IOException {
-        String doBl = returns();
-        return Float.parseFloat(doBl);
+        String floAt = returns();
+        return Float.parseFloat(floAt);
     }
+
     public String next() throws IOException {
-        String doBl = returns();
-        return doBl;
+        String nexT = returns();
+        return nexT;
     }
+
     public String nextLine() throws IOException {
         byte[] buff = new byte[1024];
         int read = in.read(buff);
