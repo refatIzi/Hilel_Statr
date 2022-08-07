@@ -35,9 +35,10 @@ class Information {
     public Information() {
         this.firstName = "Безимянный";
         this.lastName = "Безфамильный";
-        this.age=666;
+        this.age = 666;
 
     }
+
     public Information(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -96,8 +97,8 @@ class Information {
 
 
     public void showInfo() {
-       // for (int i = 0; i < 4; i++)
-            System.out.println(firstName + " " + lastName + " age " + age);
+        // for (int i = 0; i < 4; i++)
+        System.out.println(firstName + " " + lastName + " age " + age);
     }
 
     public int CalculationYearsToRetirement() {
