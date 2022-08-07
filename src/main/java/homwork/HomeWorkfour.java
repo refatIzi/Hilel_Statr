@@ -5,8 +5,9 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class HomeWorkfour {
+    static HashMap<Integer, String> map = new HashMap<>();
+
     public static void main(String[] args) {
-        HashMap<Integer, String> map = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
         String command;
         int number = 0;
@@ -23,20 +24,21 @@ public class HomeWorkfour {
                     name = scanner.nextLine();
                     System.out.println("Для того чтобы начать заново вводить данные введиет 'a'\n"
                             + "Для сохранения  изменения и просомтра введиет 'w'\n"
+                            + "Для просомтра данных введиет 'r'\n"
                             + "Для сохранения  изменения введите 's'\n"
                             + "Для выхода из системы без изменений введите 'q'");
                 } else if (command.equals("w")) {
                     map.put(number, name);
-                    Set<Integer> idPersons = map.keySet();
-                    for (Integer idPerson : idPersons) {
-                        String personName = map.get(idPerson);
-                        System.out.println("ID: " + idPerson + " Name: " + personName);
-                    }
+                    showPerson();
+                    System.out.println("Введите команду:");
                     // System.out.println(map.entrySet());
                 } else if (command.equals("s")) {
                     map.put(number, name);
                     System.out.println("Данные сохранены");
-
+                    System.out.println("Введите команду:");
+                } else if (command.equals("t")) {
+                    showPerson();
+                    System.out.println("Введите команду:");
                 } else if (command.equals("q")) {
                     System.out.println("Досвидание!!!!!!!!!");
                     break;
@@ -47,6 +49,14 @@ public class HomeWorkfour {
                 System.out.println("Введите число");
                 scanner.next();
             }
+        }
+    }
+
+    public static void showPerson() {
+        Set<Integer> idPersons = map.keySet();
+        for (Integer idPerson : idPersons) {
+            String personName = map.get(idPerson);
+            System.out.println("ID: " + idPerson + " Name: " + personName);
         }
     }
 }
