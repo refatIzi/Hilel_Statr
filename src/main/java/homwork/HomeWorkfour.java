@@ -21,7 +21,7 @@ public class HomeWorkfour {
                     scanner.nextLine();
                     System.out.println("Введите имя");
                     name = scanner.nextLine();
-                    System.out.println("Для того чтобы начать заново введиет 'a'\n"
+                    System.out.println("Для того чтобы начать заново вводить данные введиет 'a'\n"
                             + "Для сохранения  изменения и просомтра введиет 'w'\n"
                             + "Для сохранения  изменения введите 's'\n"
                             + "Для выхода из системы без изменений введите 'q'");
@@ -32,7 +32,6 @@ public class HomeWorkfour {
                         String personName = map.get(idPerson);
                         System.out.println("ID: " + idPerson + " Name: " + personName);
                     }
-
                     // System.out.println(map.entrySet());
                 } else if (command.equals("s")) {
                     map.put(number, name);
