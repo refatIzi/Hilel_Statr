@@ -4,6 +4,7 @@ public class Class_and_Fun {
     public static void main(String[] args) {
         Information information = new Information("Лиля", "Заболотна", 25);
         information.showInfo();
+        System.out.println(information.CalculationYearsToRetirement()+" лет осталось до пенсии ");
 
     }
 }
@@ -23,5 +24,8 @@ class Information {
     public void showInfo() {
         for (int i = 0; i < 4; i++)
             System.out.println("My Name " + firstName + " " + lastName + " age " + age);
+    }
+    public int CalculationYearsToRetirement(){
+        return 65-age;
     }
 }
