@@ -10,5 +10,6 @@ public class test {
         for (int i = 0; i < array.length; i++)
             System.out.println(i + 1 + " element " + array[i]);
 
+
     }
 }

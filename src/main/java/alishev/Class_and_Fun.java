@@ -4,6 +4,7 @@ public class Class_and_Fun {
     public static void main(String[] args) {
         Information information = new Information("Лиля", "Заболотна", 25);
         information.showInfo();
+
     }
 }
 
