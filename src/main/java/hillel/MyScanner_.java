@@ -38,12 +38,12 @@ public class MyScanner_ {
     }
 
     public String nextLine() throws IOException {
-        byte[] buff = new byte[1024];
-        int read = in.read(buff);
+        byte[] buff = new byte[1024];//создаю массив байт размером 1024
+        int read = in.read(buff);//записываю в buff то что пришло от потока InputStream
         // System.out.println("Size buffer "+read);
         /**Добавляем в buff данние уменшая ращмер на -1 та как последний єлемен Команда для опускания каретки на одну строку вниз
          * она нам не нужна*/
-        return new String(Arrays.copyOf(buff, read - 1));
+        return new String(Arrays.copyOf(buff, read - 1));// записываем в массив Arrays удаляем постдний элемент и преоброзуем в строку
     }
 
     private String returns() throws IOException {
