@@ -2,20 +2,21 @@ package alishev;
 
 public class ClassWithStatic {
     public static void main(String[] args) {
-        String atr = Mathematics.math("(5+3)*(6-4)*(3-1)");
+        String atr = "(5+3)*(6-4)*(3-1) > "+Mathematics.math("(5+3)*(6-4)*(3-1)");
         System.out.println(atr);
+        System.out.println("PI > "+Mathematics.PI);
     }
 }
 
 class Mathematics {
-
+    public static final double PI=3.14159265359;
     private String atr;
 
     public Mathematics(String atr) {
         this.atr = atr;
     }
 
-    public static String math(String atr) {
+    public static int math(String atr) {
         String[] arr = atr.split("\\*");
         int c = 0;
         int k = 1;
@@ -32,7 +33,7 @@ class Mathematics {
 
             k = k * c;
         }
-        return "" + k;
+        return  k;
     }
 
 }
