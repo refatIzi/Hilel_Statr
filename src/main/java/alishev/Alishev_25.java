@@ -2,8 +2,8 @@ package alishev;
 
 public class Alishev_25 {
     public static void main(String[] args) {
-    Animals animals=new Animals("Barsisk",6);
-    System.out.println(animals.toString());
+        Animals animals = new Animals("Barsisk", 6);
+        System.out.println(animals.toString());
     }
 }
 
@@ -31,7 +31,8 @@ class Animals {
     public int getAge() {
         return age;
     }
-    public String toString(){
-        return name+","+age;
+
+    public String toString() {
+        return name + "," + age;
     }
 }
