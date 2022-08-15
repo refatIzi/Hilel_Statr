@@ -2,9 +2,8 @@ package alishev;
 
 public class ClassWithStatic {
     public static void main(String[] args) {
-        String atr = "(5+3)*(6-4)*(3-1) > "+Mathematics.math("(5+3)*(6-4)*(3-1)");
-        System.out.println(atr);
-        System.out.println("PI > "+Mathematics.PI);
+        String atr = "["+Mathematics.math("(5+3)*(6-4)*(3-1)")+"]";
+        System.out.printf("Это число PI равна %1s, а задача с примера (5+3)*(6-4)*(3-1) равна %2s",Mathematics.PI,atr);
     }
 }
 

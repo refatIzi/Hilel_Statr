@@ -8,5 +8,6 @@ public class Alishev_24 {
             myInfo.append(" " + arr.toUpperCase());
         }
         System.out.println(myInfo);
+
     }
 }
