@@ -32,6 +32,7 @@ class Information {
     private String lastName;
     private int age;
 
+
     public Information() {
         this.firstName = "Безимянный";
         this.lastName = "Безфамильный";
