@@ -4,6 +4,12 @@ public class Cat extends Animals {
     private String character;
     private String favoriteFood;
 
+    public Cat() {
+        super(null, 0);
+        character = "No Name";
+        favoriteFood = "no favorite food";
+    }
+
     public Cat(String name, int age) {
         super(name, age);
     }
