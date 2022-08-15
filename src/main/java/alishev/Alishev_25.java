@@ -2,37 +2,13 @@ package alishev;
 
 public class Alishev_25 {
     public static void main(String[] args) {
-        Animals animals = new Animals("Barsisk", 6);
-        System.out.println(animals.toString());
+        Cat barsisk = new Cat("Barsisk", 6,"evil","Fish");
+        Cat murka = new Cat("Barsisk", 6);
+        murka.setCharacter("kind");
+        System.out.println(barsisk);
+        System.out.println(murka);
+
     }
 }
 
-class Animals {
-    private String name;
-    private int age;
 
-    public Animals(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String toString() {
-        return name + "," + age;
-    }
-}
