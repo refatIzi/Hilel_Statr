@@ -6,7 +6,6 @@ public class Job {
     Middle+Android-разработчика
     Требования
     Опыт работы с Java и Selenium
-    Опыт тестирования Java и веб-приложений, HTLM5
 
     *2
     Middle+Android-разработчика
