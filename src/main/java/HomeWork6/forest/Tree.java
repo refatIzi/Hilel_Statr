@@ -1,4 +1,4 @@
-package Interface.forest;
+package HomeWork6.forest;
 
 public class Tree {
     private String who;

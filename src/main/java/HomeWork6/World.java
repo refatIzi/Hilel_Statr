@@ -1,7 +1,6 @@
-package Interface;
+package HomeWork6;
 
-import Interface.forest.Tree;
-import hillel.Main;
+import HomeWork6.forest.Tree;
 
 public class World implements Information {
     public static void main(String[] args) {

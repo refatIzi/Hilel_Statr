@@ -1,4 +1,4 @@
-package Interface;
+package HomeWork6;
 
 public class Animals extends Thread {
     private String name;

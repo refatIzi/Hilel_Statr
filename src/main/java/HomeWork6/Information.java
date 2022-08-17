@@ -1,4 +1,4 @@
-package Interface;
+package HomeWork6;
 
 public interface Information {
     public void animalsMessage(String name, String message);

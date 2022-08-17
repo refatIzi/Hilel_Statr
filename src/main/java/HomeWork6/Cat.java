@@ -1,4 +1,4 @@
-package Interface;
+package HomeWork6;
 
 import alishev.Animals;
 
