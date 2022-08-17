@@ -10,8 +10,8 @@ public class Animals extends Thread {
         this.age = age;
     }
 
-    public Animals(World object, String name, int age) {
-        information = object;
+    public Animals(Information information, String name, int age) {
+        this.information = information;
         this.name = name;
         this.age = age;
     }
