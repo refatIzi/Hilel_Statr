@@ -9,19 +9,21 @@ public class World implements Information {
         Animals animals = new Animals(world, "Bob", 5);
         animals.run();
         animals.gotLost();
+        test(animals);
 
         System.out.println();
         Information cat = new Cat();
         cat.animalsMessage("Колян", "еще");
         cat.peopleMessage("Колян");
 
+
+        Cat cat1=new Cat();
+        test(cat1);
+
         System.out.println();
         Tree tree = new Tree("Bob");
         tree.walking();
         tree.hide();
-
-
-
 
 
     }
@@ -33,7 +35,11 @@ public class World implements Information {
     public void peopleMessage(String name) {
         System.out.println("Человек покормил " + name + "a");
     }
-    public void myMethod(){
+
+    public void myMethod() {
         System.out.println("Мой метод");
+    }
+    public static void test(Animals animals){
+        animals.sleep();
     }
 }

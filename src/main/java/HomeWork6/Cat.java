@@ -1,6 +1,5 @@
 package HomeWork6;
 
-import alishev.Animals;
 
 public class Cat extends Animals implements Information {
     private String character;
@@ -39,9 +38,6 @@ public class Cat extends Animals implements Information {
         return favoriteFood;
     }
 
-    public String toString() {
-        return getName() + "," + getAge() + "," + character + "," + favoriteFood;
-    }
 
     @Override
     public void animalsMessage(String name, String message) {
@@ -55,5 +51,8 @@ public class Cat extends Animals implements Information {
 
     protected void showMe() {
         System.out.println("Он спит в лесу");
+    }
+    protected void sleep(){
+        System.out.println("Кот спит");
     }
 }
