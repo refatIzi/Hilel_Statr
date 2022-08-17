@@ -34,4 +34,7 @@ public class Animals extends Thread {
         }
     }
 
+    protected void gotLost() {
+        System.out.println("got lost!");
+    }
 }

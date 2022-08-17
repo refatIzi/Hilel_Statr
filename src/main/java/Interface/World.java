@@ -8,6 +8,7 @@ public class World implements Information {
 
         World world = new World();
         Animals animals = new Animals(world, "Bob", 5);
+        animals.gotLost();
         animals.run();
 
 
