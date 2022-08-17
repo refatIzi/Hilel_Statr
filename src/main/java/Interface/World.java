@@ -10,9 +10,8 @@ public class World implements Information {
         Animals animals = new Animals(world, "Bob", 5);
         animals.run();
 
+
         Information cat = new Cat();
-
-
         cat.animalsMessage("Колян", "еще");
         cat.peopleMessage("Колян");
 
@@ -20,8 +19,7 @@ public class World implements Information {
         tree.walking();
         tree.hide();
 
-        Cat cat1 = new Cat();
-        cat1.gotLost();
+
 
 
     }

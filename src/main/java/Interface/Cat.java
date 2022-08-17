@@ -22,9 +22,6 @@ public class Cat extends Animals implements Information {
         this.favoriteFood = favoriteFood;
     }
 
-    protected void gotLost() {
-        System.out.println("got lost!");
-    }
 
     public void setCharacter(String character) {
         this.character = character;

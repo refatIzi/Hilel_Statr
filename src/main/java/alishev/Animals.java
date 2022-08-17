@@ -9,6 +9,9 @@ public class Animals {
         this.age = age;
     }
 
+    protected void gotLost() {
+        System.out.println("got lost!");
+    }
     public void setName(String name) {
         this.name = name;
     }
