@@ -23,6 +23,7 @@ public class World implements Information {
 
 
 
+
     }
 
     public void animalsMessage(String name, String message) {
@@ -31,5 +32,8 @@ public class World implements Information {
 
     public void peopleMessage(String name) {
         System.out.println("Человек покормил " + name + "a");
+    }
+    public void myMethod(){
+        System.out.println("Мой метод");
     }
 }

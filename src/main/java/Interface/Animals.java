@@ -25,7 +25,6 @@ public class Animals extends Thread {
                 a++;
                 if (a == 10) {
                     information.peopleMessage(this.name);
-
                     break;
                 }
             } catch (InterruptedException e) {
