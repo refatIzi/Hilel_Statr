@@ -22,6 +22,10 @@ public class Cat extends Animals implements Information {
         this.favoriteFood = favoriteFood;
     }
 
+    protected void gotLost() {
+        System.out.println("got lost!");
+    }
+
     public void setCharacter(String character) {
         this.character = character;
     }
@@ -50,5 +54,9 @@ public class Cat extends Animals implements Information {
     @Override
     public void peopleMessage(String name) {
         System.out.println(name + " я еще хочу!!!");
+    }
+
+    protected void showMe() {
+        System.out.println("Он спит в лесу");
     }
 }

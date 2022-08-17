@@ -1,15 +1,28 @@
 package Interface;
 
+import Interface.forest.Tree;
 import hillel.Main;
 
 public class World implements Information {
     public static void main(String[] args) {
+
         World world = new World();
         Animals animals = new Animals(world, "Bob", 5);
         animals.run();
+
         Information cat = new Cat();
+
+
         cat.animalsMessage("Колян", "еще");
         cat.peopleMessage("Колян");
+
+        Tree tree = new Tree("Bob");
+        tree.walking();
+        tree.hide();
+
+        Cat cat1 = new Cat();
+        cat1.gotLost();
+
 
     }
 
