@@ -44,11 +44,11 @@ public class Cat extends Animals implements Information {
 
     @Override
     public void animalsMessage(String name, String message) {
-        System.out.println(name+" дай покушать "+message);
+        System.out.println(name + " дай покушать " + message);
     }
 
     @Override
     public void peopleMessage(String name) {
-        System.out.println(name+" я еще хочу!!!");
+        System.out.println(name + " я еще хочу!!!");
     }
 }
