@@ -14,28 +14,14 @@ public class Cat extends Animals implements Information {
     public Cat(String name, int age) {
         super(name, age);
     }
+    public Cat(Information information, String name, int age) {
+        super(information,name,age);
+    }
 
     public Cat(String name, int age, String character, String favoriteFood) {
         super(name, age);
         this.character = character;
         this.favoriteFood = favoriteFood;
-    }
-
-
-    public void setCharacter(String character) {
-        this.character = character;
-    }
-
-    public void setFavoriteFood(String favoriteFood) {
-        this.favoriteFood = favoriteFood;
-    }
-
-    public String getCharacter() {
-        return character;
-    }
-
-    public String getFavoriteFood() {
-        return favoriteFood;
     }
 
 
@@ -52,7 +38,8 @@ public class Cat extends Animals implements Information {
     protected void showMe() {
         System.out.println("Он спит в лесу");
     }
-    protected void sleep(){
+
+    protected void sleep() {
         System.out.println("Кот спит");
     }
 }

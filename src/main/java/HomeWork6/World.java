@@ -6,7 +6,7 @@ public class World implements Information {
     public static void main(String[] args) {
 
         World world = new World();
-        Animals animals = new Animals(world, "Bob", 5);
+        Animals animals = new Animals(world, "Рекс", 5);
         animals.run();
         animals.gotLost();
         test(animals);
@@ -17,11 +17,12 @@ public class World implements Information {
         cat.peopleMessage("Колян");
 
 
-        Cat cat1=new Cat();
+        Cat cat1=new Cat(world, "Мурка", 5);
+        cat1.run();
         test(cat1);
 
         System.out.println();
-        Tree tree = new Tree("Bob");
+        Tree tree = new Tree("Белка");
         tree.walking();
         tree.hide();
 
