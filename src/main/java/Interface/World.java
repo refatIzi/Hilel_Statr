@@ -9,6 +9,7 @@ public class World implements Information {
         animals.run();
         Information cat=new Cat();
         cat.animalsMessage("Колян","еще");
+        cat.peopleMessage("Колян");
 
     }
 
