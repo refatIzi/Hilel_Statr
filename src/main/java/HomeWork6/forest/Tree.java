@@ -6,12 +6,12 @@ public class Tree {
         this.who=who;
     }
     public void walking(){
-        System.out.println(this.who+" walking in the forest");
+        System.out.println(this.who+" гуляет по лесу");
     }
     public void hide(){
-        System.out.println(this.who+" hiding in the forest");
+        System.out.println(this.who+" прячется в лесу");
     }
     protected void gotLost(){
-        System.out.println(this.who+" got lost!");
+        System.out.println(this.who+" потерялся!");
     }
 }
