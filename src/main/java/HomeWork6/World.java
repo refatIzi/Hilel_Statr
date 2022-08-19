@@ -12,7 +12,8 @@ public class World implements Information {
         animals.gotLost();
         test(animals);
 
-        System.out.println("Клас Cat я имплеметрировал тоже");
+        System.out.println("Клас Cat я имплеметрировал тоже" +
+                "кторый имеет тоже методы animalsMessage и peopleMessage");
         Information cat = new Cat();
         cat.animalsMessage("Колян", "еще");
         cat.peopleMessage("Колян");
