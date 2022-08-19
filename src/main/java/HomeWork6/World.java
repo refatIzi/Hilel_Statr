@@ -6,17 +6,18 @@ public class World implements Information {
     public static void main(String[] args) {
 
         World world = new World();
+        System.out.println("клас Animals наследует от Thread мы его вобьявляем и передеаем пареметры");
         Animals animals = new Animals(world, "Рекс", 5);
         animals.start();
         animals.gotLost();
         test(animals);
 
-        System.out.println("--------------------------");
+        System.out.println("Клас Cat я имплеметрировал тоже");
         Information cat = new Cat();
         cat.animalsMessage("Колян", "еще");
         cat.peopleMessage("Колян");
 
-        System.out.println("--------------------------");
+        System.out.println("тут я просто обьявил клас Cat который наследует от Animals, а Animals от Thread");
 
         Cat cat1 = new Cat(world, "Мурка", 5);
         cat1.start();
