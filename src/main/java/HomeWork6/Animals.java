@@ -36,7 +36,8 @@ public class Animals extends Thread {
     protected void gotLost() {
         System.out.println("Я заблудился!");
     }
-    protected void sleep(){
+
+    protected void sleep() {
         System.out.println("Животное спит");
     }
 }
