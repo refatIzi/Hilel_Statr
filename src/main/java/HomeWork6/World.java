@@ -6,7 +6,8 @@ public class World implements Information {
     public static void main(String[] args) {
 
         World world = new World();
-        /**клас Animals наследует от Thread мы его вобьявляем и передеаем пареметры*/
+        /**клас Animals наследует от Thread мы его вобьявляем и передеаем пареметры
+         * Animals(Information information, String name, int age)*/
         Animals animals = new Animals(world, "Рекс", 5);
         animals.start();
         animals.gotLost();
