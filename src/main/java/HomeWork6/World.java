@@ -7,7 +7,7 @@ public class World implements Information {
 
         World world = new World();
         Animals animals = new Animals(world, "Рекс", 5);
-        animals.run();
+        animals.start();
         animals.gotLost();
         test(animals);
 
