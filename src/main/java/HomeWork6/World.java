@@ -11,20 +11,24 @@ public class World implements Information {
         animals.gotLost();
         test(animals);
 
-        System.out.println();
+        System.out.println("--------------------------");
         Information cat = new Cat();
         cat.animalsMessage("Колян", "еще");
         cat.peopleMessage("Колян");
 
+        System.out.println("--------------------------");
 
         Cat cat1=new Cat(world, "Мурка", 5);
-        cat1.run();
+        cat1.start();
+
+        System.out.println("--------------------------");
         test(cat1);
 
         System.out.println();
         Tree tree = new Tree("Белка");
         tree.walking();
         tree.hide();
+        System.out.println("--------------------------");
 
 
     }
