@@ -37,10 +37,12 @@ public class World implements Information {
     }
 
     public void animalsMessage(String name, String message) {
+        System.out.println("--------------------------");
         System.out.println("Животное " + name + " хочет " + message);
     }
 
     public void peopleMessage(String name) {
+        System.out.println("--------------------------");
         System.out.println("Человек покормил " + name + "a");
     }
 
