@@ -12,14 +12,14 @@ public class World implements Information {
         animals.gotLost();
         test(animals);
 
-        System.out.println("Клас Cat я имплеметрировал тоже" +
-                "кторый имеет тоже методы animalsMessage и peopleMessage");
+        /**Клас Cat я имплеметрировал тоже
+                кторый имеет тоже методы animalsMessage и peopleMessage*/
         Information cat = new Cat();
         cat.animalsMessage("Колян", "еще");
         cat.peopleMessage("Колян");
 
-        System.out.println("тут я просто обьявил клас Cat который наследует от Animals, а Animals от Thread");
-
+        /**тут я просто обьявил клас Cat который наследует от Animals, а Animals от Thread*/
+        System.out.println("--------------------------");
         Cat cat1 = new Cat(world, "Мурка", 5);
         cat1.start();
 
