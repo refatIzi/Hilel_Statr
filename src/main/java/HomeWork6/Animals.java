@@ -20,7 +20,7 @@ public class Animals extends Thread {
         int a = 0;
         while (true) {
             try {
-                Thread.sleep(400);
+                Thread.sleep(500);
                 information.animalsMessage(this.name, "Есть");
                 a++;
                 if (a == 10) {

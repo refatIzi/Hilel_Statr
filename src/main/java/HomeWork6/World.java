@@ -18,7 +18,7 @@ public class World implements Information {
 
         System.out.println("--------------------------");
 
-        Cat cat1=new Cat(world, "Мурка", 5);
+        Cat cat1 = new Cat(world, "Мурка", 5);
         cat1.start();
 
         System.out.println("--------------------------");
@@ -44,7 +44,8 @@ public class World implements Information {
     public void myMethod() {
         System.out.println("Мой метод");
     }
-    public static void test(Animals animals){
+
+    public static void test(Animals animals) {
         animals.sleep();
     }
 }
