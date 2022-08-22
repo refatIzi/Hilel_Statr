@@ -1,11 +1,10 @@
 package homwork.homework7;
 
-import calculation.Calculation;
 import hillel.MyScanner_;
 
 import java.io.IOException;
 
-public class Mean {
+public class Calculator {
     public static void main(String[] args) throws IOException {
         MyScanner_ scanner = new MyScanner_(System.in);
 

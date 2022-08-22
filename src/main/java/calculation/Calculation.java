@@ -1,12 +1,17 @@
 package calculation;
 
+import homwork.homework7.test.Animals;
+
+import java.util.Arrays;
+
 public class Calculation {
     private String calculation;
 
 
     public void toSolve(String calculation) {
-        char[] solve = calculation.toCharArray();
+        char[] solve = calculation.substring(0,calculation.length()).toCharArray();
         String s = "";
+        String result;
         int cont = 0;
         //solve= Arrays.copyOfRange(solve, 0, 1);
         //solve= Arrays.copyOfRange(solve, 0, solve.length - 1);
@@ -35,10 +40,13 @@ public class Calculation {
         System.out.println("END");
     }
 
-    public void toSolveNo(String calculation) {
-        char[] solve = calculation.toCharArray();
+    public String toSolveNo(String calculation) {
+
+        char[] solveR = calculation.toCharArray();
+        char[] solve = Arrays.copyOfRange(solveR,1,solveR.length-1);
         String s = "";
         int cont = 0;
+        String res = "";
 
         /**Реализуем контроллер для понмиание где начинаеться и за заканчиваеться отрываюшая и
          * закрываюшая скобка. Пока скобака отрываюшая мы прибавляем +1 к cont если закрываемая скобка то -1 к cont
@@ -70,6 +78,7 @@ public class Calculation {
 
         }
         System.out.println("END");
+        return res;
     }
     /**                     (((400+2)-(2*3))/((6-2)/(3-1)))/((3-1+20)*3)
      *                 (((400+2)-(2*3))/((6-2)/(3-1)))                            (3-1+20)*3
