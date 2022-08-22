@@ -15,13 +15,12 @@ public class Mean {
         int b = scanner.nextInt();
         System.out.println("Введите третее чилос:");
         int c = scanner.nextInt();
-        System.out.println("Среднее Арифметическое равно = " + Calcualtion.mean(a, b, c));
+        System.out.println("Среднее Арифметическое равно = " + calculate(a, b, c));
 
     }
-}
-
-class Calcualtion {
-    public static double mean(int a, int b, int c) {
+    public static double calculate(int a, int b, int c) {
         return (a + b + c) / 3.0;
     }
 }
+
+
