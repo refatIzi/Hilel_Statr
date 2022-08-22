@@ -1,4 +1,4 @@
-package HomeWork6.forest;
+package homwork.homework6.forest;
 
 public class Tree {
     private String who;

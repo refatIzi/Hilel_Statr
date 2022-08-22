@@ -1,4 +1,4 @@
-package HomeWork6;
+package homwork.homework6;
 
 public class Animals extends Thread {
     private String name;

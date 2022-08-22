@@ -1,6 +1,6 @@
-package HomeWork6;
+package homwork.homework6;
 
-import HomeWork6.forest.Tree;
+import homwork.homework6.forest.Tree;
 
 public class World implements Information {
     public static void main(String[] args) {
@@ -35,7 +35,12 @@ public class World implements Information {
 
 
     }
-
+    public void gds(){
+        Animals animals = new Animals(World.this, "Рекс", 5);
+        animals.start();
+        animals.gotLost();
+        test(animals);
+    }
     public void animalsMessage(String name, String message) {
         System.out.println("--------------------------");
         System.out.println("Животное " + name + " хочет " + message);
