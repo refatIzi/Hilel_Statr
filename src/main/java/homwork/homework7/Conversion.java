@@ -7,8 +7,6 @@ import java.io.IOException;
 public class Conversion {
     public static void main(String[] args) throws IOException {
         MyScanner_ scanner = new MyScanner_(System.in);
-        String command;
-
         System.out.println("Введите сумму денег:");
         int a = scanner.nextInt();
         System.out.println("Введите курс для конвертации:");
