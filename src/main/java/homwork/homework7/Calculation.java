@@ -1,6 +1,6 @@
 package homwork.homework7;
 
-public class Calculator {
+public class Calculation {
 
 
     public static long divide(int a, int b) {

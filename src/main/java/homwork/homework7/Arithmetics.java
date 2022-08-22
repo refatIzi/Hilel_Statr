@@ -23,16 +23,16 @@ public class Arithmetics {
                 command = scanner.nextLine();
                 switch (command) {
                     case "a":
-                        System.out.println(Calculator.add(a, b));
+                        System.out.println(Calculation.add(a, b));
                         break;
                     case "d":
-                        System.out.println(Calculator.divide(a, b));
+                        System.out.println(Calculation.divide(a, b));
                         break;
                     case "m":
-                        System.out.println(Calculator.multi(a, b));
+                        System.out.println(Calculation.multi(a, b));
                         break;
                     case "s":
-                        System.out.println(Calculator.sub(a, b));
+                        System.out.println(Calculation.sub(a, b));
                         break;
                     case "q":
                         status = true;
