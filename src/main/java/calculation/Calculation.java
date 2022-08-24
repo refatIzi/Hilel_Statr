@@ -14,6 +14,15 @@ public class Calculation {
      * *******((400+2)-(2*3))        /        ((6-2)/(3-1))                       (3-1+20)      3
      * **(400+2)        (2*3)              (6-2)      (3-1)
      */
+    public String check(String calculation){
+        String res="";
+        if(calculation.matches("[\\d()*/+-]*")){
+            res=toSolve(calculation);
+        }else {
+            res="Проверте что Вы не ввели лишний  симво к примеру ? % $ # ";
+        }
+        return res;
+    }
     public String toSolve(String calculation) {
         /**Тут мы удаляем скобки такова условие что в моем калькуляторе вся задача должна содержаться в закрывающих скобка
          * к примеру ((3-1+20)*3) должна быть отркыввающая скобка и закрывающяя скобка а сонованая задача которую
@@ -59,7 +68,7 @@ public class Calculation {
     //Solution in two brackets solTwoBrackets решение в две скобки
     /**Метод который определяет открывающие и закрываюшие скобки для определения обшего знака между закрываюшими
      * и котрыавющими скобками ()/() или ()*() или ()+() или ()-() */
-    public String solTwoBrackets(String calculation) {
+    private String solTwoBrackets(String calculation) {
         System.out.println("Solution in two brackets ---------------- start ");
         String res = "";
         if (calculation.matches("\\((.*?)\\)")) {
@@ -106,7 +115,7 @@ public class Calculation {
 
 
     /**Метод деления*/
-    public String divide(String art) {
+    private String divide(String art) {
         System.out.println("Divide "+art);
         int divide = 0;
         String[] arr_num = art.split("\\/");
@@ -124,7 +133,7 @@ public class Calculation {
         return String.valueOf(divide);
     }
     /**Метод Умножения*/
-    public String multi(String art) {
+    private String multi(String art) {
         System.out.println("Multi "+art);
         int adding = 0;
         String[] arr_num = art.split("\\*");
@@ -143,11 +152,13 @@ public class Calculation {
     }
 
     /**Метод сложения и вычитания выпольнин в одном виде*/
-    public String operationPM(String art) {
+    private String operationPM(String art) {
         System.out.println("OperationPM "+art);
         /**Тут я обвявляю два массива в первый  массив я записываю числа во второй  знаки + или - для понимания когда мне производить операцию*/
-        String[] arr_num = art.split("[+-]");
-        String[] pl_mn = art.replaceAll("[0-9]+", ",").split(",");
+        String[] arr_num = art.split("[+-]");// тут мы разбили массив на числа
+        String[] pl_mn = art.replaceAll("[0-9]+", ",").split(",");// тут мы удалаем чиала и в место них записываем [,]
+        // но так как число начинаеться с начала то у анс первая будет запитая ,+,+,-,+,- как то так
+        // то есть в 0 ячейку маасива записываеться пустота и првоерка на + или - начинаем с 1 ячейки
         /**Обратите внимание что В первый элемент массива записываеться пустота а потом + или - */
         //54+4+6-3-1
         //54 4 6 3 1
