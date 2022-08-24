@@ -1,117 +1,109 @@
 package calculation;
 
-import homwork.homework7.test.Animals;
-
-import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Calculation {
     private String calculation;
 
-
-    public void toSolve(String calculation) {
-        char[] solve = calculation.substring(0,calculation.length()).toCharArray();
-        String s = "";
-        String result;
-        int cont = 0;
-        //solve= Arrays.copyOfRange(solve, 0, 1);
-        //solve= Arrays.copyOfRange(solve, 0, solve.length - 1);
-        /**Обратите внимание на то что создаем массив на 2 символа менше та как первый и последний  символ массива solve
-         * не используеться та как они закрываюшие. Реализуем контроллер для понмиание где начинаеться и за заканчиваеться отрываюшая и
-         * закрываюшая скобка. Пока скобака отрываюшая мы прибавляем +1 к cont если закрываемая скобка то -1 к cont
-         * и проверяем если пока cont не равно 0 то мы елементы массива прибавляем к строке
-         * если cont равно то мы проводи операцию со строкой и запоминаем при  этом обнуляем строку*/
-        char[] solveTo = new char[solve.length - 2];
-        for (int i = 1; i < solve.length - 1; i++) {
-            solveTo[i - 1] = solve[i];
-            if (solveTo[i - 1] == '(') {
-                cont++;
-            }
-            if (solveTo[i - 1] == ')') {
-                cont--;
-            }
-            s = s + solveTo[i - 1];
-            if (cont == 0) {
-                System.out.print(s);
-                //System.out.println("["+solveTo[i -1]+"]");
-                s = "";
-            }
-
-        }
-        System.out.println("END");
-    }
-
-    public String toSolveNo(String calculation) {
-
-        char[] solveR = calculation.toCharArray();
-        char[] solve = Arrays.copyOfRange(solveR,1,solveR.length-1);
-        String s = "";
-        int cont = 0;
+    /**
+     * *****************************(((400+2)-(2*3))/((6-2)/(3-1)))/((3-1+20)*3)
+     * ***************** (((400+2)-(2*3))/((6-2)/(3-1)))                                (3-1+20)*3
+     * *******((400+2)-(2*3))        /        ((6-2)/(3-1))                       (3-1+20)      3
+     * **(400+2)        (2*3)              (6-2)      (3-1)
+     */
+    public String toSolve(String calculation) {
+        /**Тут мы удаляем скобки такова условие что в моем калькуляторе вся задача должна содержаться в закрывающих скобка
+         * к примеру ((3-1+20)*3) должна быть отркыввающая скобка и закрывающяя скобка а сонованая задача которую
+         * мы должны решить это (3-1+20)*3*/
+        calculation = calculation.substring(1, calculation.length() - 1);
         String res = "";
-
-        /**Реализуем контроллер для понмиание где начинаеться и за заканчиваеться отрываюшая и
-         * закрываюшая скобка. Пока скобака отрываюшая мы прибавляем +1 к cont если закрываемая скобка то -1 к cont
-         * и проверяем если пока cont не равно 0 то мы елементы массива прибавляем к строке
-         * если cont равно то мы проводи операцию со строкой и запоминаем при  этом обнуляем строку*/
-        char[] solveTo = new char[solve.length];
-        int k = 0;
-        String[] result = new String[3];
-        for (int i = 0; i < solve.length; i++) {
-            solveTo[i] = solve[i];
-            if (solveTo[i] == '(') {
-                cont++;
+        Matcher m = Pattern.compile("\\((.*)\\)").matcher(calculation);
+        /**тут мы ишим скобки к прмиеру у нас 300-(3*6) у нас есть скобки (3*6) то выпольняеться условие в if (m.find())
+         * если у нас нет скобко а такое будет к примеру 500+4 или 500*4 или 500/4 то выпольняеться в else*/
+        // System.out.println("check "+m.find());
+        if (m.find()) {
+            /**проверем на разположение цифрв за скобкой  или после к пример 300[-][+][*][/](3*6)  300- (300[-][+][*][/]) находиться впереди
+             * или (3*6)-300 -300 ([-][+][*][/]300) находиться после скобок или у нас окрываюшие и закрывваюшие скобки пропорциональны как тут (30-2)*((500+4)*2)
+             * если calculation.indexOf(m.group(0))==0 то то что в скобка находиться в начален сткрои и если calculation.length()>0
+             * есть продолжение к примеру -300 имееться*/
+            int check = calculation.indexOf(m.group(0));
+            calculation = calculation.replace(m.group(0), "");
+            if (check == 0 && calculation.length() > 0) {
+                System.out.println("состояние A > " + m.group(0) + "::" + calculation);
+                if (calculation.contains("+") || calculation.contains("-"))
+                    res = operationPM(toSolve(m.group(0)) + calculation);
+                if (calculation.contains("*")) res = multi(toSolve(m.group(0)) + calculation);
+                if (calculation.contains("/")) res = divide(toSolve(m.group(0)) + calculation);
+            } else if (check > 0 && calculation.length() > 0) {
+                System.out.println("состояние B > " + calculation + "::" + m.group(0));
+                if (calculation.contains("+") || calculation.contains("-"))
+                    res = operationPM(calculation + toSolve(m.group(0)));
+                if (calculation.contains("*")) res = multi(calculation + toSolve(m.group(0)));
+                if (calculation.contains("/")) res = divide(calculation + toSolve(m.group(0)));
+            } else {
+               res= solTwoBrackets(m.group(0));
             }
-            if (solveTo[i] == ')') {
-                cont--;
-            }
-            s = s + solveTo[i];
-            if (cont == 0) {
-                //System.out.println(s);
-                System.out.println("Iteration " + k);
-                if (s.equals("/")) {
-                    System.out.println(s);
-                } else {
-                    result[k] = calculation(s);
-                }
-                s = "";
-                k++;
-            }
-
+        } else {
+            /**тут будет остаток то что соталось к пример у нас осталося два значения без скобок 500+4
+             * и оно будет тут вычисляться*/
+            if (calculation.contains("+") || calculation.contains("-")) res = operationPM(calculation);
+            if (calculation.contains("*")) res = multi(calculation);
+            if (calculation.contains("/")) res = divide(calculation);
         }
-        System.out.println("END");
         return res;
     }
-    /**                     (((400+2)-(2*3))/((6-2)/(3-1)))/((3-1+20)*3)
-     *                 (((400+2)-(2*3))/((6-2)/(3-1)))                            (3-1+20)*3
-     *     ((400+2)-(2*3))        /        ((6-2)/(3-1))                       (3-1+20)      3
-     * (400+2)        (2*3)              (6-2)      (3-1)
-     * */
-    public String calculation(String atr) {
-        /**мы дожны разбить строку до момента когда встречаеться большое количество повторяюшихся скобкок после знака * или / это
-         * будет середина то есть eще скобки [\(\)] перед  * или /  до болшого скопления ( */
-        String[] parts = atr.split("[\\(\\)]");
-        String calculation = null;
-        String result = null;
-        int k=0;
-        System.out.println(atr);
-        for (int i=0;i<parts.length;i++) {
-            System.out.println(k+" " + parts[i]);
-            if (!parts[i].equals("")) {
-                if (parts[i].contains("+") || parts[i].contains("-")) {
-                    //System.out.println(s);
-                    //calculation = operationPM(s);
-                } else {
-                    //System.out.println("operation [*/] " + s);
-                    //if (s.contains("*")) result = add(calculation + s);
-                    //if (s.contains("/")) result = divide(calculation + s);
-                }
 
+    //Solution in two brackets solTwoBrackets решение в две скобки
+    public String solTwoBrackets(String calculation) {
+        System.out.println("Solution in two brackets ---------------- start ");
+        String res = "";
+        if (calculation.matches("\\((.*?)\\)")) {
+            char[] solve = calculation.toCharArray();
+            String s = "";
+            int cont = 0;
+
+            /**Реализуем контроллер для понмиание где начинаеться и за заканчиваеться открываюшая и
+             * закрываюшая скобка. Пока скобака отрываюшая мы прибавляем +1 к cont если закрываемая скобка то -1 к cont
+             * и проверяем если пока cont не равно 0 то мы елементы массива прибавляем к строке
+             * если cont равно то мы проводи операцию со строкой и запоминаем при  этом обнуляем строку*/
+            char[] solveTo = new char[solve.length];
+            int k = 0;
+            String[] result = new String[3];
+            for (int i = 0; i < solve.length; i++) {
+                solveTo[i] = solve[i];
+                s = s + solveTo[i];
+                if (solveTo[i] == '(') {
+                    cont++;
+                }
+                if (solveTo[i] == ')') {
+                    cont--;
+                }
+                if (cont == 0) {
+                    System.out.println(s);
+                    result[k] = s;
+                    s = "";
+                    k++;
+                }
             }
-            k++;
+            /**после разбеения к примеру result[(30-2)] result[*] result[((500+4)*2)] мы каждуючасть заптсываем в массив
+             * далее проверяем второй элемента на содержания операуии [-] или [+] или [*] или [/] то выполняем
+             * действия деленмия умножения сложения и вычитания для этого реализованы специальные методы divide multi и operationPM*/
+            if (result[1].contains("+") || result[1].contains("-"))
+                res = operationPM(toSolve(result[0]) + result[1] + toSolve(result[2]));
+            if (result[1].contains("*"))
+                res = multi(toSolve(result[0]) + result[1] + toSolve(result[2]));
+            if (result[1].contains("/"))
+                res = divide(toSolve(result[0]) + result[1] + toSolve(result[2]));
         }
-        return result;
+        return res;
     }
 
+
+
+
     public String divide(String art) {
+        System.out.println("Divide "+art);
         int divide = 0;
         String[] arr_num = art.split("\\/");
         for (int i = 0; i < arr_num.length; i++) {
@@ -124,11 +116,12 @@ public class Calculation {
             }
             if (i == arr_num.length - 1) divide = Integer.parseInt(arr_num[i]);
         }
-        System.out.println(divide);
+        System.out.println("divide answer "+divide);
         return String.valueOf(divide);
     }
 
-    public String add(String art) {
+    public String multi(String art) {
+        System.out.println("Multi "+art);
         int adding = 0;
         String[] arr_num = art.split("\\*");
         for (int i = 0; i < arr_num.length; i++) {
@@ -141,11 +134,12 @@ public class Calculation {
             }
             if (i == arr_num.length - 1) adding = Integer.parseInt(arr_num[i]);
         }
-        System.out.println(adding);
+        System.out.println("multi answer "+adding);
         return String.valueOf(adding);
     }
 
     public String operationPM(String art) {
+        System.out.println("OperationPM "+art);
         /**Тут я обвявляю два массива в первый  массив я записываю числа во второй  знаки + или - для понимания когда мне производить операцию*/
         String[] arr_num = art.split("[+-]");
         String[] pl_mn = art.replaceAll("[0-9]+", ",").split(",");
@@ -174,7 +168,7 @@ public class Calculation {
             if (i == arr_num.length - 1) SM = Integer.parseInt(arr_num[i]);
             k++;
         }
-        System.out.println(SM);
+        System.out.println("OperationPM answer"+SM);
         return String.valueOf(SM);
     }
 }
