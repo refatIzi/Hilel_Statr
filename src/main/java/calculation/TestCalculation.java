@@ -5,6 +5,7 @@ public class TestCalculation {
         Calculation calculation = new Calculation();
         /**убедитесь что при вводе задачи вы установили закрывающие скобки
          *------------------------- как тут (((500+4)*2)-30) ---------------*/
+        /***/
         System.out.println(calculation.toSolve("((((400-2)-(100/2))/((4*4)/8))/((224-200)/12))"));//=87
 
         //System.out.println(calculation.toSolve("((((400+2)-(2*3))/((6-2)/(3-1)))*((3-1+20)*3))"));//13068

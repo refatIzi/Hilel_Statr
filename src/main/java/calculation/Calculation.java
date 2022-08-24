@@ -5,7 +5,9 @@ import java.util.regex.Pattern;
 
 public class Calculation {
     private String calculation;
-
+        /**Тут примененеа сложная рекурсия где один метод вызывает другой а он предыдуший
+         * ********************************************************************************
+         * Данный Клас решает задачу в виде дерева где все разбиваеться на части и выполняеться*/
     /**
      * *****************************(((400+2)-(2*3))/((6-2)/(3-1)))/((3-1+20)*3)
      * ***************** (((400+2)-(2*3))/((6-2)/(3-1)))                                (3-1+20)*3
@@ -55,6 +57,8 @@ public class Calculation {
     }
 
     //Solution in two brackets solTwoBrackets решение в две скобки
+    /**Метод который определяет открывающие и закрываюшие скобки для определения обшего знака между закрываюшими
+     * и котрыавющими скобками ()/() или ()*() или ()+() или ()-() */
     public String solTwoBrackets(String calculation) {
         System.out.println("Solution in two brackets ---------------- start ");
         String res = "";
@@ -101,7 +105,7 @@ public class Calculation {
 
 
 
-
+    /**Метод деления*/
     public String divide(String art) {
         System.out.println("Divide "+art);
         int divide = 0;
@@ -119,7 +123,7 @@ public class Calculation {
         System.out.println("divide answer "+divide);
         return String.valueOf(divide);
     }
-
+    /**Метод Умножения*/
     public String multi(String art) {
         System.out.println("Multi "+art);
         int adding = 0;
@@ -138,6 +142,7 @@ public class Calculation {
         return String.valueOf(adding);
     }
 
+    /**Метод сложения и вычитания выпольнин в одном виде*/
     public String operationPM(String art) {
         System.out.println("OperationPM "+art);
         /**Тут я обвявляю два массива в первый  массив я записываю числа во второй  знаки + или - для понимания когда мне производить операцию*/
