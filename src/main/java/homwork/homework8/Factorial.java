@@ -13,5 +13,6 @@ public class Factorial {
         res = factorial * factorial(factorial-1);
         System.out.println(factorial+" "+res);
         return res;
+
     }
 }
