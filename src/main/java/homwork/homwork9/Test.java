@@ -8,6 +8,7 @@ public class Test {
         Dog dog=new Dog("Rex",12,"kind","Beef");
         dog.showSound();
         System.out.println(dog);
+        System.out.println(murka.equals(dog));
 
 
 
