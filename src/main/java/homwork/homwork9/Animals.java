@@ -1,6 +1,6 @@
-package alishev;
+package homwork.homwork9;
 
-public class Animals {
+public abstract class Animals {
     private String name;
     private int age;
 
@@ -8,7 +8,7 @@ public class Animals {
         this.name = name;
         this.age = age;
     }
-
+    public abstract void showSound();
 
     public void setName(String name) {
         this.name = name;
