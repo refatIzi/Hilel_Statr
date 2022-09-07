@@ -8,11 +8,11 @@ import java.io.ObjectInputStream;
 public class ReadObject {
     public static void main(String[] args) {
         try {
-            FileInputStream fileInputStream=new FileInputStream("people.bin");
-            ObjectInputStream inputStream=new ObjectInputStream(fileInputStream);
-            People people1=(People) inputStream.readObject();
-            People people2=(People) inputStream.readObject();
-            People people3=(People) inputStream.readObject();
+            FileInputStream fileInputStream = new FileInputStream("people.bin");
+            ObjectInputStream inputStream = new ObjectInputStream(fileInputStream);
+            People people1 = (People) inputStream.readObject();
+            People people2 = (People) inputStream.readObject();
+            People people3 = (People) inputStream.readObject();
             System.out.println(people1);
             System.out.println(people2);
             System.out.println(people3);

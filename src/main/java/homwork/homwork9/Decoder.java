@@ -9,11 +9,11 @@ public class Decoder {
 
 
     public static void main(String[] args) throws FileNotFoundException {
-       // Pattern pattern= Pattern.compile( "\\b(ПОД|ЗА|К|ИЗ|ПО|ОБ|ОТ|В|У|С|О|НАД|ОКОЛО|ПРИ|ПЕРЕД)\\b");
+        // Pattern pattern= Pattern.compile( "\\b(ПОД|ЗА|К|ИЗ|ПО|ОБ|ОТ|В|У|С|О|НАД|ОКОЛО|ПРИ|ПЕРЕД)\\b");
         File fileName = new File("./string.txt");
-        Scanner scanner=new Scanner(fileName);
-        while (scanner.hasNextLine()){
-            System.out.println(scanner.nextLine().replaceAll("\\b(ПОД|ЗА|К|ИЗ|ПО|ОБ|ОТ|В|У|С|О|НАД|ОКОЛО|ПРИ|ПЕРЕД)\\b","JAVA"));
+        Scanner scanner = new Scanner(fileName);
+        while (scanner.hasNextLine()) {
+            System.out.println(scanner.nextLine().replaceAll("\\b(ПОД|ЗА|К|ИЗ|ПО|ОБ|ОТ|В|У|С|О|НАД|ОКОЛО|ПРИ|ПЕРЕД)\\b", "JAVA"));
         }
     }
 }

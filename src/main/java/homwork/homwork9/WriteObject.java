@@ -7,9 +7,9 @@ import java.io.ObjectOutputStream;
 
 public class WriteObject {
     public static void main(String[] args) {
-        People people1=new People(1,"BOB");
-        People people2=new People(2,"MAX");
-        People people3=new People(3,"NADIA");
+        People people1 = new People(1, "BOB");
+        People people2 = new People(2, "MAX");
+        People people3 = new People(3, "NADIA");
         try {
             FileOutputStream fileOutputStream = new FileOutputStream("people.bin");
             ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);

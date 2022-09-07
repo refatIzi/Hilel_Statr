@@ -7,15 +7,15 @@ import java.util.Scanner;
 
 public class WriteFile {
     public static void main(String[] args) throws FileNotFoundException {
-        File file=new File("./myfile.txt");
-        PrintWriter printWriter=new PrintWriter(file);
-        Scanner scanner=new Scanner(System.in);
-        String str=scanner.nextLine();
+        File file = new File("./myfile.txt");
+        PrintWriter printWriter = new PrintWriter(file);
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
         System.out.println(str);
         printWriter.println(str);
         printWriter.close();
-        Scanner readFile=new Scanner(file);
-        while (readFile.hasNextLine()){
+        Scanner readFile = new Scanner(file);
+        while (readFile.hasNextLine()) {
             System.out.println(readFile.nextLine());
         }
     }

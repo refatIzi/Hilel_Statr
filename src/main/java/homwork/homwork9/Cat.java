@@ -9,6 +9,7 @@ public class Cat extends Animals {
         character = "No Name";
         favoriteFood = "no favorite food";
     }
+
     public Cat(String name, int age) {
         super(name, age);
     }

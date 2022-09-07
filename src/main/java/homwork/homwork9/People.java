@@ -5,9 +5,10 @@ import java.io.Serializable;
 public class People implements Serializable {
     int id;
     String name;
-    People(int id,String name){
-        this.id=id;
-        this.name=name;
+
+    People(int id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public int getId() {
@@ -25,7 +26,8 @@ public class People implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    public String toString(){
-        return id+" : "+name;
+
+    public String toString() {
+        return id + " : " + name;
     }
 }
