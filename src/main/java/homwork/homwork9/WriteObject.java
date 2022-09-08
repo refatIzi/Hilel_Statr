@@ -17,6 +17,7 @@ public class WriteObject {
             outputStream.writeObject(people2);
             outputStream.writeObject(people3);
             outputStream.close();
+            fileOutputStream.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

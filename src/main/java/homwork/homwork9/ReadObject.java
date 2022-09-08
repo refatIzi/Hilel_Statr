@@ -16,7 +16,8 @@ public class ReadObject {
             System.out.println(people1);
             System.out.println(people2);
             System.out.println(people3);
-
+            inputStream.close();
+            fileInputStream.close();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
