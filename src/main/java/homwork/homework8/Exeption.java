@@ -20,6 +20,6 @@ public class Exeption {
         while (scanner.hasNextLine()){
             System.out.println(scanner.nextLine());
         }
-
+        scanner.close();
     }
 }
