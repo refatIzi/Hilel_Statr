@@ -11,5 +11,6 @@ public class Working_With_Files {
             while (scanner.hasNextLine()){
                 System.out.println(scanner.nextLine());
             }
+            scanner.close();
     }
 }
