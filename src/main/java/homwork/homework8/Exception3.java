@@ -13,8 +13,7 @@ public class Exception3 {
             System.out.println(e);
         }
     }
-    public static void run() throws Exception, ParseException,IllegalArgumentException {
 
-
+    public static void run() throws Exception, ParseException, IllegalArgumentException {
     }
 }

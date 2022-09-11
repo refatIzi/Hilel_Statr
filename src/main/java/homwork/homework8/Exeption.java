@@ -11,13 +11,14 @@ public class Exeption {
         try {
             run("string.txt");
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден "+e);
+            System.out.println("Файл не найден " + e);
         }
     }
+
     public static void run(String dir) throws FileNotFoundException {
-        File file=new File(dir);
-        Scanner scanner=new Scanner(file);
-        while (scanner.hasNextLine()){
+        File file = new File(dir);
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNextLine()) {
             System.out.println(scanner.nextLine());
         }
         scanner.close();

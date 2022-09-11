@@ -12,7 +12,6 @@ public class Test {
         System.out.println(murka.equals(dog));
         Electrocar.Battery battery = new Electrocar.Battery();
         battery.charging(100);
-
         System.out.println(Electrocar.Battery.showBattery());
 
     }

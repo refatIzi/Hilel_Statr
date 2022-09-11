@@ -5,11 +5,12 @@ import java.io.Serializable;
 public class People implements Serializable {
     int id;
     String name;
-    private transient int  age;
-    People(int id, String name,int age) {
+    private transient int age;
+
+    People(int id, String name, int age) {
         this.id = id;
         this.name = name;
-        this.age=age;
+        this.age = age;
     }
 
     public int getId() {
@@ -29,6 +30,6 @@ public class People implements Serializable {
     }
 
     public String toString() {
-        return id + " : " + name+" : "+age;
+        return id + " : " + name + " : " + age;
     }
 }

@@ -10,13 +10,14 @@ public class ReadObject {
     public static void main(String[] args) {
 
 
-            read_One();
-            read_Two();
+        read_One();
+        read_Two();
 
     }
-    private static void read_One()  {
 
-        try(ObjectInputStream inputStream=new ObjectInputStream(new FileInputStream("people.bin"))) {
+    private static void read_One() {
+
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("people.bin"))) {
             People people1 = (People) inputStream.readObject();
             People people2 = (People) inputStream.readObject();
             People people3 = (People) inputStream.readObject();
@@ -29,10 +30,11 @@ public class ReadObject {
         }
 
     }
+
     private static void read_Two() {
 
-        try(ObjectInputStream inputStream=new ObjectInputStream(new FileInputStream("people_two.bin"))){
-            People[] people=(People[]) inputStream.readObject();
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("people_two.bin"))) {
+            People[] people = (People[]) inputStream.readObject();
             System.out.println(Arrays.toString(people));
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
