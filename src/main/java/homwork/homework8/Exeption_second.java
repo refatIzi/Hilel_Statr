@@ -11,5 +11,6 @@ public class Exeption_second {
                 throw new Exceptiona_Show("Смотри что вводишь");
             }
         }
+        
     }
 }
