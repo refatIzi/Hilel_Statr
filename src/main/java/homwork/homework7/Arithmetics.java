@@ -1,12 +1,12 @@
 package homwork.homework7;
 
-import hillel.MyScanner_;
+import hillel.MyScanner;
 
 import java.io.IOException;
 
 public class Arithmetics {
     public static void main(String[] args) throws IOException {
-        MyScanner_ scanner = new MyScanner_(System.in);
+        MyScanner scanner = new MyScanner(System.in);
         String command;
         int a;
         int b;

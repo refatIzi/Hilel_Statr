@@ -1,6 +1,6 @@
 package alishev;
 
-import hillel.MyScanner_;
+import hillel.MyScanner;
 
 import java.io.IOException;
 import java.util.Random;
@@ -17,7 +17,7 @@ public class Arrays_of_String {
 
         System.out.println("Виберите из меню состав сендвича нажав номер состава");
 
-        MyScanner_ myScanner_ = new MyScanner_(System.in);
+        MyScanner myScanner_ = new MyScanner(System.in);
 
         int check = myScanner_.nextInt() - 1;
 
