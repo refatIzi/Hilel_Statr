@@ -15,10 +15,10 @@ public class Arraycopy {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
         }
-        Arrays.copyOf(arr, 5);
-        System.out.println(arr.length);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
+        int[] arrray = Arrays.copyOf(arr, 5);
+        System.out.println(arrray.length);
+        for (int i = 0; i < arrray.length; i++) {
+            System.out.print(arrray[i]);
         }
     }
 }
