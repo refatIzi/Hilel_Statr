@@ -1,4 +1,4 @@
-package homwork.homework11;
+package homwork.homework11.rectangle;
 
 public interface Rect {
     double areaCalculator();

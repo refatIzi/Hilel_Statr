@@ -1,8 +1,6 @@
-package homwork.homework11;
+package homwork.homework11.rectangle;
 
 import hillel.MyScanner;
-
-import java.util.Scanner;
 
 public class TestRectangle {
     public static void main(String[] args) {

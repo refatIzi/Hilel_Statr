@@ -1,4 +1,4 @@
-package homwork.homework11;
+package homwork.homework11.rectangle;
 
 public class Rectangle implements Rect {
     private double side1;

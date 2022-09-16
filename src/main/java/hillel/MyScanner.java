@@ -19,6 +19,7 @@ public class MyScanner {
      */
     ConcurrentLinkedQueue<String> list = new ConcurrentLinkedQueue<>();
 
+
     public int nextInt() throws IOException {
         String iNt = returns();
         return Integer.parseInt(iNt);
