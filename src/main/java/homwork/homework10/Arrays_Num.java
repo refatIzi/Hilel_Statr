@@ -10,7 +10,7 @@ public class Arrays_Num {
     public static void main(String[] args) {
         int[] array = new int[10];
         for (int i = 0; i < array.length; i++)
-            array[i] = new Random().nextInt(-99, 120);
+            array[i] = new Random().nextInt(-10, 10);
         for (int i = 0; i < array.length; i++)
             System.out.println(i + 1 + " " + array[i]);
         System.out.println("Below Zero " + belowZero(array));
