@@ -1,11 +1,15 @@
 package homwork.homework14;
 
 public interface MyList<T> {
-    public void add(T value);
-    public void remove(int index);
-    public int size();
-   void show();
-   void clear();
+    void add(T value);
 
-   Object get(int index);
+    void remove(int index);
+
+    int size();
+
+    void show();
+
+    void clear();
+
+    Object get(int index);
 }

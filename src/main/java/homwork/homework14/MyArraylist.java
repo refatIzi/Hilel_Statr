@@ -7,6 +7,7 @@ public class MyArraylist<T> implements MyList {
     Object[] objects = new Object[1];
     int index = 0;
     Object[] obj;
+
     @Override
     public void add(Object value) {
         if (index == objects.length) {
@@ -33,7 +34,7 @@ public class MyArraylist<T> implements MyList {
             }
         }
         objects = Arrays.copyOf(objectOne, objectOne.length - 1);
-        this.index=this.index-1;
+        this.index = this.index - 1;
     }
 
     @Override
@@ -50,7 +51,7 @@ public class MyArraylist<T> implements MyList {
 
     @Override
     public void clear() {
-        objects=new Object[0];
+        objects = new Object[0];
     }
 
     @Override
