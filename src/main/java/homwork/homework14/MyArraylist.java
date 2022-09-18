@@ -47,4 +47,14 @@ public class MyArraylist<T> implements MyList {
             System.out.println("Index " + index + " object " + objects[index]);
 
     }
+
+    @Override
+    public void clear() {
+        objects=new Object[0];
+    }
+
+    @Override
+    public Object get(int index) {
+        return objects[index];
+    }
 }

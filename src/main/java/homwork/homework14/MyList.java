@@ -5,4 +5,7 @@ public interface MyList<T> {
     public void remove(int index);
     public int size();
    void show();
+   void clear();
+
+   Object get(int index);
 }

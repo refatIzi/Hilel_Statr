@@ -23,6 +23,11 @@ public class test {
         list.add(new People("Robert"));
         list.show();
         System.out.println("Size "+list.size());
+        System.out.println("Show object "+list.get(4));
+        System.out.println("Clear ");
+        list.clear();
+        list.show();
+        System.out.println("Size "+list.size());
         //List a=new ArrayList<>();
 
     }
