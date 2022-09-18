@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
+
         Room room = new ClassRoom();
         room.addPupil(new ExcellentPupil("Alex"));
         room.addPupil(new GoodPupil("Max"));
