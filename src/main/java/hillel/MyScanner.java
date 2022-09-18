@@ -5,17 +5,20 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class MyScanner_ {
+public class MyScanner {
     private final InputStream in;
 
-    public MyScanner_(InputStream in) {
+    public MyScanner(InputStream in) {
         this.in = in;
     }
 
-     /**класс ConcurrentLinkedQueue использовал вместо ArrayList так как изначально я его использовал
+    /**
+     * класс ConcurrentLinkedQueue использовал вместо ArrayList так как изначально я его использовал
      * удобвство в том что с помошью метода offer() ми добовляем данние в list а уже с помощью метода poll()
-     * ми забираем данние из list и при єто он удаляет то что забрали начиная с начала*/
+     * ми забираем данние из list и при єто он удаляет то что забрали начиная с начала
+     */
     ConcurrentLinkedQueue<String> list = new ConcurrentLinkedQueue<>();
+
 
     public int nextInt() throws IOException {
         String iNt = returns();

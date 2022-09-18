@@ -8,7 +8,7 @@ public class TestCalculation {
         /**------------------------3 открывающих и 3 закрывающих*/
         //(57$-((-5+9)5+67/(90+9))
         // ((57-((((-5+9)*5)+67)/(90+9)))
-       // System.out.println(calculation.check("((((400-2)-(100/2))/((4*4)/8))/((224-200)/12))"));//=87
+        System.out.println(calculation.check("((((400-2)-(100/2))/((4*4)/8))/((224-200)/12))"));//=87
         //System.out.println(calculation.check("(57-((((-5+9)*5)+67)/(90+9)))"));
         //System.out.println(calculation.toSolve("(20.0+67)"));
         //System.out.println(calculation.check("(-5+9)"));
@@ -26,7 +26,7 @@ public class TestCalculation {
       //  System.out.println(calculation.check("(-5+9)+5"));
         //System.out.println(calculation.check("(80-(10-5)+(10-5))"));
         /// System.out.println(calculation.check("(80- (10-5) + (10-5))"));
-           System.out.println(calculation.check("(80-5)+(10-5)"));
+          // System.out.println(calculation.check("(80-5)+(10-5)"));
 
 
         // System.out.println(calculation.check("(((20-(5*2))-(25/5))+(10-5)-80)"));

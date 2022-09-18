@@ -6,10 +6,13 @@ import java.util.Scanner;
 
 public class Working_With_Files {
     public static void main(String[] args) throws FileNotFoundException {
-        File fileName = new File("./string.txt");
-        Scanner scanner=new Scanner(fileName);
-            while (scanner.hasNextLine()){
-                System.out.println(scanner.nextLine());
-            }
+        File fileName = new File("./index.html");
+        Scanner scanner = new Scanner(fileName);
+        String str="";
+        while (scanner.hasNextLine()) {
+           str=str+ scanner.nextLine()+"\n";
+        }
+        System.out.println(str);
+        scanner.close();
     }
 }

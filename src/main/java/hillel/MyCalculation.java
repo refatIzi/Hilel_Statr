@@ -5,7 +5,7 @@ import java.io.IOException;
 public class MyCalculation {
     public static void main(String[] args) throws IOException {
 
-        MyScanner_ scanner = new MyScanner_(System.in);
+        MyScanner scanner = new MyScanner(System.in);
         System.out.println("Пожалуйста введите два числа");
         int a = scanner.nextInt();
         int b = scanner.nextInt();

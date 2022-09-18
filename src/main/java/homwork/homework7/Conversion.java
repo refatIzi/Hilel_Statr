@@ -1,12 +1,12 @@
 package homwork.homework7;
 
-import hillel.MyScanner_;
+import hillel.MyScanner;
 
 import java.io.IOException;
 
 public class Conversion {
     public static void main(String[] args) throws IOException {
-        MyScanner_ scanner = new MyScanner_(System.in);
+        MyScanner scanner = new MyScanner(System.in);
         System.out.println("Введите сумму денег:");
         int a = scanner.nextInt();
         System.out.println("Введите курс для конвертации:");

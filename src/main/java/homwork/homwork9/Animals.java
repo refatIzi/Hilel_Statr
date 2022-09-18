@@ -8,6 +8,12 @@ public abstract class Animals {
         this.name = name;
         this.age = age;
     }
+
+    public boolean equals(Object object) {
+        Animals animals = (Animals) object;
+        return this.name == animals.name && this.age == animals.age;
+    }
+
     public abstract void showSound();
 
     public void setName(String name) {
