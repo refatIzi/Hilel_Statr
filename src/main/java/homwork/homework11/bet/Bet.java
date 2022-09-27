@@ -27,7 +27,6 @@ public class Bet {
         this.risk="";
         this.stakes="";
     }
-
     Bet(String stakes, String risk){
        this.stakes=stakes;
        this.risk=risk;

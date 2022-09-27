@@ -21,7 +21,6 @@ public class Book {
     }
 
     public static ArrayList<Book> books = new ArrayList<>();
-
     public static void main(String[] args) throws IOException {
         MyScanner scanner = new MyScanner(System.in);
         System.out.println("Введите данные о книге или если хотите выйти введите q");

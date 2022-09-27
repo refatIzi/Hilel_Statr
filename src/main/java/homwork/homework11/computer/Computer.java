@@ -13,6 +13,5 @@ public class Computer {
         computers[2]=computer2;
         computers[3]=computer3;
         computers[4]=computer4;
-
     }
 }
