@@ -1,6 +1,7 @@
 package homwork.homework10;
 
 public enum Animals {
+
     CAT("КОШКА"),DOG("СОБАКА"),FROG("ЛЯГУШКА");
     public String translate;
 
